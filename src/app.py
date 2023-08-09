@@ -17,10 +17,8 @@ def hello_world():
 def add_new_todo(todos):
     request_body = request.json
     print("Incoming request with the following body", request_body)
-    return jsonify({
-
-    })
-
+    todos.append(request_body)
+    return jsonify(todos)
 
 
 
